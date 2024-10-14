@@ -1,0 +1,12 @@
+library(e1071)
+ir=iris
+ir
+train=ir[1:100,]
+test=ir[101:150,]
+model=naiveBayes(Species~.,data=train)
+pred=predict(model,test)
+#table(pred)
+#table(test$Species)
+table(test$Species,pred)
+library(scales)
+accuracy=percent()
