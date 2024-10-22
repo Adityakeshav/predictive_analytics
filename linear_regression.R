@@ -26,3 +26,4 @@ predictions <- predict(model, newdata = testData)
 # Evaluate the model
 mse <- mean((predictions - testData$medv)^2)
 cat("Mean Squared Error:", mse, "\n")
+
